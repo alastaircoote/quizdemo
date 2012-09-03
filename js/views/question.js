@@ -38,7 +38,7 @@ define(["views/slideview","models","text!statecapitals.json","libs/underscore","
 		},
 		formSubmit: function(e) {
 			e.preventDefault();
-				if (this._currentSeconds < 15) {
+			if (this._currentSeconds < 15) {
 				this.answered = true;
 				this.secondsAnswered = this._currentSeconds;
 				this.answerProvided = this.answerInput.val();
@@ -74,6 +74,7 @@ define(["views/slideview","models","text!statecapitals.json","libs/underscore","
 				},1000);
 			} else {
 				this.answerButton.hide();
+				this.answerInput.attr("disabled",true);
 				setTimeout(function(){
 					self.showAnswer();
 				},1000);
