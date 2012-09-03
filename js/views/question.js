@@ -93,7 +93,7 @@ define(["views/slideview","models","text!statecapitals.json","libs/underscore","
 				/* If current user */
 				if (contestant.get("id") == self.options.quizInstance.me.id) {
 					if (answer.get("rightOrWrong") != true) return;
-					contestant.set("score",contestant.get("score") + (15 - self.secondsAnswered));
+					contestant.set("score",contestant.get("score") + (15 - self.secondsAnswered) + 1);
 					return;
 				}
 				/* Again, hack to make up the answers for our made up users */
