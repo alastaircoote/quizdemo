@@ -38,11 +38,13 @@ define(["views/slideview","models","text!statecapitals.json","libs/underscore","
 		},
 		formSubmit: function(e) {
 			e.preventDefault();
-			this.answered = true;
-			this.secondsAnswered = this._currentSeconds;
-			this.answerProvided = this.answerInput.val();
-			this.$el.addClass("answered");
-			this.answerOutput.html(this.answerProvided);
+				if (this._currentSeconds < 15) {
+				this.answered = true;
+				this.secondsAnswered = this._currentSeconds;
+				this.answerProvided = this.answerInput.val();
+				this.$el.addClass("answered");
+				this.answerOutput.html(this.answerProvided);
+			}
 		},
 		render: function() {
 			this.$el.html(_.template(QuestionTemplate,this.model.toJSON()));
@@ -93,7 +95,7 @@ define(["views/slideview","models","text!statecapitals.json","libs/underscore","
 				/* If current user */
 				if (contestant.get("id") == self.options.quizInstance.me.id) {
 					if (answer.get("rightOrWrong") != true) return;
-					contestant.set("score",contestant.get("score") + (15 - self.secondsAnswered) + 1);
+					contestant.set("score",contestant.get("score") + (15 - self.secondsAnswered));
 					return;
 				}
 				/* Again, hack to make up the answers for our made up users */
