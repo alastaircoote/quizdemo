@@ -1,0 +1,63 @@
+@import "preboot.less";
+@border: solid 1px #929292;
+
+body {
+	background:url("../images/low_contrast_linen.png");
+	font-family:"Lato";
+}
+
+.button {
+	@back: #004D77;
+	font-size: 20px;
+	line-height:45px;
+	text-transform: uppercase;
+	font-weight:900;
+	letter-spacing:0.2em;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+	.box-shadow(3px 3px 3px rgba(0,0,0,0.2));
+	cursor:pointer;
+	background:#004D77;
+	#gradient > .vertical(lighten(@back,10),@back);
+	.border-radius(10px);
+	color:#ffffff;
+	font-family:"Lato";
+	border-width:0;
+	padding: 2px 20px;
+
+	&:hover {
+		#gradient > .vertical(lighten(@back,20),lighten(@back,10));
+	}
+
+	&.disabled {
+		#gradient > .vertical(lighten(#555,10),#555);
+	}
+}
+
+#introbox {
+	width: 600px;
+	height: 100px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-300px;
+	margin-top:-50px;
+	text-align: center;
+	color:#ffffff;
+	font-size: 28px;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+
+	button {
+		display:block;
+		margin: 20px auto;
+	}
+}
+
+#quizbox {
+	display:none;
+	.box-shadow(15px 15px 15px rgba(0,0,0,0.5));
+	@import "structure.less";
+	@import "quiz.less";
+	@import "comments.less";
+	@import "question.less";
+	@import "answer.less";
+}

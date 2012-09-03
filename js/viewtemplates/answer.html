@@ -1,0 +1,11 @@
+<div>
+	<h3><%= rightOrWrongText %></h3>
+	<h4>The correct answer is</h4>
+	<p class="answer"><%= correctAnswer %></p>
+	<h4>Quizzers answered:</h4>
+	<ul class="pie">
+		<li><span class="option first"></span><%=correctAnswer %></li>
+		<li><span class="option second"></span><%= incorrectAnswer %></li>
+	</ul>
+	<button class="button showscores">Show the scores</button>
+</div>

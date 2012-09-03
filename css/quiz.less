@@ -1,0 +1,154 @@
+
+
+ul, li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.transform(@transform) {
+	-webkit-transform: @transform;
+	-moz-transform: @transform;
+	transform: @transform;
+}
+
+.transform-origin(@transform-origin) {
+	-webkit-transform-origin: @transform-origin;
+	-moz-transform-origin: @transform-origin;
+	transform-origin: @transform-origin;
+}
+
+.panel.left {
+	background:#ffffff;
+	.border-radius(10px 0px 0px 10px);
+	.box-shadow(15px 0px 15px rgba(0,0,0,0.2));
+	z-index:2;
+	
+	& > div {
+		
+	}
+}
+
+.panel.right  {
+	background:#DDDDDD;
+	.border-radius(0px 10px 10px 0px);
+
+	.slidepanel {
+		.transition(left 0.2s ease-out);
+		.transform(translate3d(0, 0, 0));
+
+		& > div {
+			padding-left:30px;
+		}
+	}
+}
+
+#video {
+	width: 440px;
+	height: 275px;
+	background:#000000;
+	position: relative;
+	overflow: hidden;
+	#videoPlaceholder, #userImg {
+	//	display: none;
+		visibility:hidden;
+		position:absolute;
+		z-index:20;
+	}
+
+	#userImg {
+		position: absolute;
+		width:100%;
+		left:0;
+		top:50%;
+		z-index:10;
+	}
+}
+
+
+
+.becontestant {
+	width: 100%;
+}
+
+#contestantList {
+	list-style:none;
+	padding:0;
+	margin:0;
+
+	li {
+		position:relative;
+		padding-left:65px;
+		height: 52px;
+		font-family: "Lato";
+		font-weight:400;
+		text-transform: uppercase;
+		color:#555;
+		font-size: 20px;
+		line-height: 50px;
+		margin-top:15px;
+
+		p {
+			margin:0;
+		}
+		img {
+			position: absolute;
+			display:block;
+			top:0;
+			left:0;
+			
+		}
+
+		p.score {
+			position: absolute;
+			right:0;
+			top:0;
+			font-weight:900;
+			margin:0;
+			width: 50px;
+			text-align:center;
+		}
+
+		&.highlighted {
+			background:#ddd;
+		}
+	}
+}
+
+.facebookImage {
+	width: 50px;
+	height: 50px;
+	border: solid 1px #cccccc;
+}
+
+
+
+
+ul.taboptions {
+	
+	margin:0;
+	padding:0;
+	font-size:0px;
+	border-left: @border;
+	margin-bottom:-1px;
+
+	li {
+		background:#C4C4C4;
+		display:inline-block;
+		text-transform:uppercase;
+		font-size: 12px;
+		line-height:12px;
+		font-weight:900;
+		border:@border;
+		border-left-width:0;
+		margin:0;
+		padding: 5px 8px;
+		cursor:pointer;
+
+		&.active {
+			background:#ffffff;
+			border-bottom-color:#ffffff;
+		}
+	}
+}
+

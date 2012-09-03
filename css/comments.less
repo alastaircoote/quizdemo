@@ -1,0 +1,115 @@
+@border: solid 1px #929292;
+#commentCompose {
+	position: relative;
+	background:#C4C4C4;
+	padding:10px 10px 2px 65px;
+	margin-top:20px;
+
+	img {
+		display:block;
+		position: absolute;
+		top:10px;
+		left:10px;
+		border:@border;
+	}
+
+	& > div {
+		position: relative;
+	}
+
+	textarea.commentInput {
+		display:block;
+		border:@border;
+		width:340px;
+		min-width: 340px;
+		max-width: 340px;
+		height: 30px;
+		padding: 6px;
+		outline:none;
+		font-size: 12px;
+	}
+	
+	ul.footer {
+		margin:10px -10px 0px -65px;
+		padding: 5px 5px 0px 5px;
+		border-top: @border;
+		text-transform: uppercase;
+	}
+
+}
+
+ul.footer {
+	
+	margin:0;
+	
+
+	li {
+		display:inline-block;
+		margin:0;
+		padding:0;
+		line-height: 18px;
+		font-size:12px;
+		color:#555;
+		margin-right:10px;
+
+		input {
+			display:block;
+			float:left;
+			margin-right: 7px;
+		}
+	}
+
+}
+
+ol#comments {
+	margin:0;
+	padding:0;
+	margin-top:20px;
+
+	& > li {
+		padding-left:65px;
+		position: relative;
+		min-height:52px;
+		padding-bottom: 10px;
+		font-size: 12px;
+
+		div.head {
+			text-transform: uppercase;
+		}
+
+		a.author {
+			color:#000000;
+			text-decoration:none;
+			
+			font-weight:900;
+		}
+
+		span.points {
+			padding-left:10px;
+		}
+
+		p.text {
+			margin:5px 0px;
+			
+		}
+
+		img {
+			position: absolute;
+			top:0;
+			left:0;
+		}
+
+		ul.footer li button {
+			background:transparent;
+			border-width:0px;
+			padding:0;
+			color:#555;
+
+			&:hover {
+				text-decoration: underline;
+				cursor:pointer;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,714 @@
+/*
+  Bootstrap v1.1
+  Variables and mixins to bootstrap any new web development project.
+*/
+/* Variables
+-------------------------------------------------- */
+/* Mixins
+-------------------------------------------------- */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+.container {
+  width: 940px;
+  margin: 0 auto;
+  zoom: 1;
+}
+.container:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#flexbox .display-box {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+}
+#reset .global-reset html,
+#reset .global-reset body,
+#reset .global-reset div,
+#reset .global-reset span,
+#reset .global-reset applet,
+#reset .global-reset object,
+#reset .global-reset iframe,
+#reset .global-reset h1,
+#reset .global-reset h2,
+#reset .global-reset h3,
+#reset .global-reset h4,
+#reset .global-reset h5,
+#reset .global-reset h6,
+#reset .global-reset p,
+#reset .global-reset blockquote,
+#reset .global-reset pre,
+#reset .global-reset a,
+#reset .global-reset abbr,
+#reset .global-reset acronym,
+#reset .global-reset address,
+#reset .global-reset big,
+#reset .global-reset cite,
+#reset .global-reset code,
+#reset .global-reset del,
+#reset .global-reset dfn,
+#reset .global-reset em,
+#reset .global-reset img,
+#reset .global-reset ins,
+#reset .global-reset kbd,
+#reset .global-reset q,
+#reset .global-reset s,
+#reset .global-reset samp,
+#reset .global-reset small,
+#reset .global-reset strike,
+#reset .global-reset strong,
+#reset .global-reset sub,
+#reset .global-reset sup,
+#reset .global-reset tt,
+#reset .global-reset var,
+#reset .global-reset b,
+#reset .global-reset u,
+#reset .global-reset i,
+#reset .global-reset center,
+#reset .global-reset dl,
+#reset .global-reset dt,
+#reset .global-reset dd,
+#reset .global-reset ol,
+#reset .global-reset ul,
+#reset .global-reset li,
+#reset .global-reset fieldset,
+#reset .global-reset form,
+#reset .global-reset label,
+#reset .global-reset legend,
+#reset .global-reset table,
+#reset .global-reset caption,
+#reset .global-reset tbody,
+#reset .global-reset tfoot,
+#reset .global-reset thead,
+#reset .global-reset tr,
+#reset .global-reset th,
+#reset .global-reset td,
+#reset .global-reset article,
+#reset .global-reset aside,
+#reset .global-reset canvas,
+#reset .global-reset details,
+#reset .global-reset embed,
+#reset .global-reset figure,
+#reset .global-reset figcaption,
+#reset .global-reset footer,
+#reset .global-reset header,
+#reset .global-reset hgroup,
+#reset .global-reset menu,
+#reset .global-reset nav,
+#reset .global-reset output,
+#reset .global-reset ruby,
+#reset .global-reset section,
+#reset .global-reset summary,
+#reset .global-reset time,
+#reset .global-reset mark,
+#reset .global-reset audio,
+#reset .global-reset video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+#reset .global-reset body {
+  line-height: 1;
+}
+#reset .global-reset ol,
+#reset .global-reset ul {
+  list-style: none;
+}
+#reset .global-reset table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#reset .global-reset caption,
+#reset .global-reset th,
+#reset .global-reset td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+#reset .global-reset q,
+#reset .global-reset blockquote {
+  quotes: none;
+}
+#reset .global-reset q:before,
+#reset .global-reset blockquote:before,
+#reset .global-reset q:after,
+#reset .global-reset blockquote:after {
+  content: "";
+  content: none;
+}
+#reset .global-reset a img {
+  border: none;
+}
+#reset .global-reset article,
+#reset .global-reset aside,
+#reset .global-reset details,
+#reset .global-reset figcaption,
+#reset .global-reset figure,
+#reset .global-reset footer,
+#reset .global-reset header,
+#reset .global-reset hgroup,
+#reset .global-reset menu,
+#reset .global-reset nav,
+#reset .global-reset section {
+  display: block;
+}
+#reset .reset-box-model {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#reset .reset-font {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+#reset .reset-focus {
+  outline: 0;
+}
+#reset .reset-body {
+  line-height: 1;
+}
+#reset .reset-list-style {
+  list-style: none;
+}
+#reset .reset-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#reset .reset-table-cell {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+#reset .reset-quotation {
+  quotes: none;
+}
+#reset .reset-quotation:before,
+#reset .reset-quotation:after {
+  content: "";
+  content: none;
+}
+#reset .reset-image-anchor-border {
+  border: none;
+}
+#reset .reset-html5 article,
+#reset .reset-html5 aside,
+#reset .reset-html5 details,
+#reset .reset-html5 figcaption,
+#reset .reset-html5 figure,
+#reset .reset-html5 footer,
+#reset .reset-html5 header,
+#reset .reset-html5 hgroup,
+#reset .reset-html5 menu,
+#reset .reset-html5 nav,
+#reset .reset-html5 section {
+  display: block;
+}
+body {
+  background: url("../images/low_contrast_linen.png");
+  font-family: "Lato";
+}
+.button {
+  font-size: 20px;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background: #004D77;
+  background-color: #004d77;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#006eaa), to(#004d77));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#006eaa, #004d77);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#006eaa, #004d77);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #006eaa), color-stop(100%, #004d77));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#006eaa, #004d77);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#006eaa, #004d77);
+  /* Opera 11.10 */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006eaa', endColorstr='#004d77', GradientType=0);
+  /* IE6 & IE7 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#006eaa', endColorstr='#004d77', GradientType=0)";
+  /* IE8+ */
+
+  background-image: linear-gradient(#006eaa, #004d77);
+  /* the standard */
+
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: "Lato";
+  border-width: 0;
+  padding: 2px 20px;
+}
+.button:hover {
+  background-color: #006eaa;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#008fdd), to(#006eaa));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#008fdd, #006eaa);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#008fdd, #006eaa);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #008fdd), color-stop(100%, #006eaa));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#008fdd, #006eaa);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#008fdd, #006eaa);
+  /* Opera 11.10 */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008fdd', endColorstr='#006eaa', GradientType=0);
+  /* IE6 & IE7 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#008fdd', endColorstr='#006eaa', GradientType=0)";
+  /* IE8+ */
+
+  background-image: linear-gradient(#008fdd, #006eaa);
+  /* the standard */
+
+}
+.button.disabled {
+  background-color: #555555;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#6f6f6f), to(#555555));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#6f6f6f, #555555);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#6f6f6f, #555555);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6f6f6f), color-stop(100%, #555555));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#6f6f6f, #555555);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#6f6f6f, #555555);
+  /* Opera 11.10 */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6f6f6f', endColorstr='#555555', GradientType=0);
+  /* IE6 & IE7 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#6f6f6f', endColorstr='#555555', GradientType=0)";
+  /* IE8+ */
+
+  background-image: linear-gradient(#6f6f6f, #555555);
+  /* the standard */
+
+}
+#introbox {
+  width: 600px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 28px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+#introbox button {
+  display: block;
+  margin: 20px auto;
+}
+#quizbox {
+  display: none;
+  -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+}
+#quizbox {
+  width: 960px;
+  height: 580px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -480px;
+  margin-top: -295px;
+}
+#quizbox .panel {
+  width: 480px;
+  height: 580px;
+  float: left;
+  position: relative;
+}
+#quizbox .panel  > div {
+  padding: 20px;
+}
+#quizbox .panel div.slidepanel {
+  padding: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+#quizbox .panel div.slidepanel  > div {
+  padding: 20px;
+}
+#quizbox .panel div.slidepanel.slideout {
+  left: -480px;
+}
+#quizbox ul,
+#quizbox li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#quizbox .panel.left {
+  background: #ffffff;
+  -moz-border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0px 0px 10px;
+  -webkit-box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+#quizbox .panel.right {
+  background: #DDDDDD;
+  -moz-border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+#quizbox .panel.right .slidepanel {
+  -webkit-transition: left 0.2s ease-out;
+  -moz-transition: left 0.2s ease-out;
+  transition: left 0.2s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#quizbox .panel.right .slidepanel  > div {
+  padding-left: 30px;
+}
+#quizbox #video {
+  width: 440px;
+  height: 275px;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+#quizbox #video #videoPlaceholder,
+#quizbox #video #userImg {
+  visibility: hidden;
+  position: absolute;
+  z-index: 20;
+}
+#quizbox #video #userImg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  z-index: 10;
+}
+#quizbox .becontestant {
+  width: 100%;
+}
+#quizbox #contestantList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#quizbox #contestantList li {
+  position: relative;
+  padding-left: 65px;
+  height: 52px;
+  font-family: "Lato";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #555;
+  font-size: 20px;
+  line-height: 50px;
+  margin-top: 15px;
+}
+#quizbox #contestantList li p {
+  margin: 0;
+}
+#quizbox #contestantList li img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+#quizbox #contestantList li p.score {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 900;
+  margin: 0;
+  width: 50px;
+  text-align: center;
+}
+#quizbox #contestantList li.highlighted {
+  background: #ddd;
+}
+#quizbox .facebookImage {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #cccccc;
+}
+#quizbox ul.taboptions {
+  margin: 0;
+  padding: 0;
+  font-size: 0px;
+  border-left: solid 1px #929292;
+  margin-bottom: -1px;
+}
+#quizbox ul.taboptions li {
+  background: #C4C4C4;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 900;
+  border: solid 1px #929292;
+  border-left-width: 0;
+  margin: 0;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+#quizbox ul.taboptions li.active {
+  background: #ffffff;
+  border-bottom-color: #ffffff;
+}
+#quizbox #commentCompose {
+  position: relative;
+  background: #C4C4C4;
+  padding: 10px 10px 2px 65px;
+  margin-top: 20px;
+}
+#quizbox #commentCompose img {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: solid 1px #929292;
+}
+#quizbox #commentCompose  > div {
+  position: relative;
+}
+#quizbox #commentCompose textarea.commentInput {
+  display: block;
+  border: solid 1px #929292;
+  width: 340px;
+  min-width: 340px;
+  max-width: 340px;
+  height: 30px;
+  padding: 6px;
+  outline: none;
+  font-size: 12px;
+}
+#quizbox #commentCompose ul.footer {
+  margin: 10px -10px 0px -65px;
+  padding: 5px 5px 0px 5px;
+  border-top: solid 1px #929292;
+  text-transform: uppercase;
+}
+#quizbox ul.footer {
+  margin: 0;
+}
+#quizbox ul.footer li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+  font-size: 12px;
+  color: #555;
+  margin-right: 10px;
+}
+#quizbox ul.footer li input {
+  display: block;
+  float: left;
+  margin-right: 7px;
+}
+#quizbox ol#comments {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+#quizbox ol#comments  > li {
+  padding-left: 65px;
+  position: relative;
+  min-height: 52px;
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+#quizbox ol#comments  > li div.head {
+  text-transform: uppercase;
+}
+#quizbox ol#comments  > li a.author {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 900;
+}
+#quizbox ol#comments  > li span.points {
+  padding-left: 10px;
+}
+#quizbox ol#comments  > li p.text {
+  margin: 5px 0px;
+}
+#quizbox ol#comments  > li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#quizbox ol#comments  > li ul.footer li button {
+  background: transparent;
+  border-width: 0px;
+  padding: 0;
+  color: #555;
+}
+#quizbox ol#comments  > li ul.footer li button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#quizbox .question .stopwatch {
+  background: url("../images/quiz_sprites.png") no-repeat;
+  width: 201px;
+  height: 237px;
+  margin: 10px auto 20px auto;
+  position: relative;
+}
+#quizbox .question .stopwatch .secondhand {
+  width: 74px;
+  height: 6px;
+  background: #000000;
+  position: absolute;
+  top: 134px;
+  right: 100px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transform-origin: 70px 6px;
+  -moz-transform-origin: 70px 6px;
+  transform-origin: 70px 6px;
+}
+#quizbox .question .timer {
+  font-weight: 900;
+  text-align: center;
+  font-size: 50px;
+  line-height: 50px;
+}
+#quizbox .question .questiontext {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 28px;
+}
+#quizbox .question input[type=text] {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  font-size: 28px;
+  padding: 6px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#quizbox .question .button {
+  padding: 3px 20px;
+  margin: 0px auto;
+  display: block;
+}
+#quizbox .question .answer {
+  text-align: center;
+  font-size: 28px;
+  display: none;
+  margin-top: 20px;
+  font-weight: 900;
+}
+#quizbox .question.answered form {
+  display: none;
+}
+#quizbox .question.answered .answer {
+  display: block;
+}
+#quizbox .answer h3,
+#quizbox .answer h4,
+#quizbox .answer p.answer {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+}
+#quizbox .answer h3 {
+  font-size: 40px;
+  font-weight: 900;
+}
+#quizbox .answer h4 {
+  color: #555;
+  font-size: 26px;
+  font-weight: 300;
+}
+#quizbox .answer p.answer {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 40px;
+  color: #555;
+}
+#quizbox .answer ul.pie {
+  height: 180px;
+  margin-top: 30px;
+  padding-left: 210px;
+  background: url("../images/quiz_sprites.png") no-repeat 0px -290px;
+  margin-left: 30px;
+}
+#quizbox .answer ul.pie li {
+  clear: left;
+  margin-bottom: 10px;
+}
+#quizbox .answer ul.pie span.option {
+  border: solid 1px #72A6CC;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+#quizbox .answer ul.pie span.option.first {
+  background: #003399;
+}
+#quizbox .answer ul.pie span.option.second {
+  background: #0066CC;
+}
+#quizbox .answer button.showscores {
+  margin: 20px auto 0px auto;
+  display: block;
+  padding: 2px 20px;
+}

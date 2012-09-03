@@ -1,0 +1,41 @@
+& {
+	width:960px;
+	height: 580px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -480px;
+	margin-top: -295px;
+}
+
+.panel {
+	width:480px;
+	height: 580px;
+	float:left;
+	position:relative;
+	
+	& > div {
+		padding: 20px;
+	}
+
+	&.left {
+	//	z-index:10;
+	}
+
+}
+
+.panel div.slidepanel {
+	padding:0px;
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	& > div {
+		padding:20px;
+	}
+
+	&.slideout {
+		left:-480px;
+	}
+}

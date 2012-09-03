@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/all.css" type="text/css"/>
+	</head>
+	<body>
+		<div id="introbox">
+			Want to take part in the quiz?
+			<button class="button disabled" id="fbLogin">Log in with Facebook</button>
+		</div>
+		<div id="quizbox">
+			<div class="panel left">
+				<div>
+					<div id="video" ><div id="videoPlaceholder"></div><img src="" id="userImg"/></div>
+					<ol id="contestantList" class="contestants">
+
+					</ol>
+				</div>
+			</div>
+			<div class="panel right" id="rightPanel">
+				<div class="slidepanel" id="startPanel">
+					<div>
+						<button class="button becontestant">Be a contestant</button>
+						<div id="commentCompose">
+							<img class="facebookImage thisUserImg" src=""/>
+							<ul class="taboptions">
+								<li class="active">Text</li>
+								<li>Video</li>
+							</ul>
+							<textarea class="commentInput"></textarea>
+							<ul class="footer">
+								<li>
+									<input type="radio" name="commentType" id="rdoAllComments" checked/>
+									<label for="rdoAllComments">All comments</label>
+								</li>
+								<li>
+									<input type="radio" name="commentType" id="rdoTweets"/>
+									<label for="rdoTweets">Tweets</label>
+								</li>
+								<li>
+									<input type="radio" name="commentType" id="rdoVideoComments"/>
+									<label for="rdoVideoComments">Video Comments</label>
+								</li>
+							</ul>
+						</div>
+						<ol id="comments">
+
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script data-main="js/start" src="js/libs/require.js"></script>
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	</body>
+</html>
