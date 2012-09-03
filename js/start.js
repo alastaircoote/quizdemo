@@ -29,6 +29,7 @@ if (window.location.hash != "") {
 requirejs(["jquery","views/quiz","libs/fb!"], function(jQ,QuizInstance,fb){
 
     $("#fbLogin").removeClass("disabled");
+    $("#fbLogin").attr("disabled",false)
     $("#fbLogin").on("click", function() {
         $("#fbLogin").addClass("disabled");
         $("#fbLogin").html("Loading...")
