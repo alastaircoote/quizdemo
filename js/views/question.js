@@ -53,8 +53,6 @@ define(["views/slideview","models","text!statecapitals.json","libs/underscore","
 			this.answerButton = this.$el.find("input[type=submit]");
 
 			this.answerInput.focus();
-
-			this.answerInput.val(this.model.get("answer"));
 			
 		},
 		startTimer: function() {
