@@ -16,6 +16,13 @@ requirejs.config({
         }
     }
 });
+
+requirejs.onError = function (err) {
+    if (err.requireType === 'timeout' && err.requireModules.indexOf("libs/fb!") > -1) {
+        alert("Cannot load the Facebook API. Do you have it blocked?")
+    }
+}
+
 if (window.location.hash != "") {
     window.location = "/"
 }
