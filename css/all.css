@@ -598,6 +598,7 @@ body {
   padding: 0;
   color: #555;
   font-family:"Lato";
+  font-size: 12px;
 }
 #quizbox ol#comments  > li ul.footer li button:hover {
   text-decoration: underline;
